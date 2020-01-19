@@ -26,7 +26,7 @@ exports.findConnections = (coordinates, techs) => {
   return connections.filter(connection => {
     return (
       calculateDistance(coordinates, connection.coordinates) < 10 &&
-      connections.techs.some(item => techs.includes(item))
+      connection.techs.some(item => techs.includes(item))
     );
   });
 };
